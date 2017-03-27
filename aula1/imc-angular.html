@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="imcApp" ng-cloack>
+<head>
+  <script src="https://code.angularjs.org/1.3.5/angular.min.js"></script>
+</head>
+<body ng-controller="ImcController">
+  <label>Peso <input ng-model="peso"/> kg</label><br/>
+  <label>Altura <input ng-model="altura"/> m</label><br/>
+  <button ng-click="calculaimc()">Calcular</button>
+  <div id="resultado">
+    <hr/>
+    <p>IMC: {{ imc | number }}</p>
+    <p>Situação: {{situacao}}</p>
+  </div>
+  <script src="imc-controller.js"></script>
+</body>
+</html>
