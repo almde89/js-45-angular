@@ -23,3 +23,7 @@ Fullstack JS:
 **public**: aplicação cliente (browser).
 
 **Exercícios**: 1.3; 1.13.
+
+**Nota**: Dá uma olhadinha na página 15 da apostila, sobre SRC do IMG (1.14 NG-SRC).
+
+**Obs.**: Promisses: https://github.com/kriskowal/q & https://docs.angularjs.org/api/ng/service/$q
