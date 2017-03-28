@@ -1,4 +1,4 @@
-(function () {
+(function (dom) {
   var app = angular.module('alurapic');// consulta ao módulo já criado.
   app.controller('FotosController', ['$scope', '$http',
     function ($scope, $http) {
@@ -13,4 +13,4 @@
       };*/
     }
   ]);
-})()
+})(document)
