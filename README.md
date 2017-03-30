@@ -27,3 +27,29 @@ Fullstack JS:
 **Nota**: Dá uma olhadinha na página 15 da apostila, sobre SRC do IMG (1.14 NG-SRC).
 
 **Obs.**: Promisses: https://github.com/kriskowal/q & https://docs.angularjs.org/api/ng/service/$q
+
+# Aula 4
+
+## ngResource
+
+Maneira de operar com os verbos do HTTP e adicionar um método update para utilizar
+o verbo PUT na hora de atualizar, pois o save utiliza sempre o verbo POST.
+```javascript
+var recursoFoto = $resource('v1/fotos/:fotoId', null, {update: {method: 'PUT'}});
+/*Para coleções: query*/
+recursoFoto.query(function (dados) {
+
+}, function (erro) {
+
+});
+/*Para itens de coleção*/
+recursoFoto.get({fotoId: '12ab'}, function (dados) {
+
+}, function (erro) {
+
+});
+recursoFoto.save($scope.foto, fnSucesso, fnErro);
+recursoFoto.delete({fotoId: '12ab'}, fn, fn);
+/* conforme definido em 5 linha. */
+recursoFoto.update({fotoId: '12ab'}, $scope.foto, fn, fn);
+```

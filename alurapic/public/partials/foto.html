@@ -18,7 +18,7 @@
 
     <div class="form-group">
       <label>URL</label>
-      <input name="url" type="url" class="form-control" ng-model="foto.url" required></input>
+      <input name="url" class="form-control" ng-model="foto.url" required></input>
     </div>
 
     <div ng-show="formulario.url.$dirty && formulario.url.$invalid" ng-messages="formulario.url.$error"
@@ -32,11 +32,23 @@
       <textarea name="descricao" class="form-control" ng-model="foto.descricao">
       </textarea>
     </div>
+
+    <div class="form-group">
+      <label>Grupo</label>
+      <select name="grupo" class="form-control" ng-controller="GruposController"
+        ng-options="grupo._id as grupo.nome for grupo in grupos"
+        ng-model="foto.grupo" required>
+        <option value="">Escolha um grupo</option>
+      </select>
+      <span ng-show="formulario.$submitted && formulario.grupo.$error.required"
+        class="form-control alert-danger">Grupo Obrigatório</span>
+    </div>
+
     <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">Salvar</button>
     <a href="/" class="btn btn-default">Voltar</a>
     <hr>
   </div>
   <div class="col-md-6">
-    <minha-foto ng-show="{{foto}}" url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+    <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
   </div>
 </form>

@@ -19,12 +19,11 @@
 <div class="row">
   <div ng-repeat="foto in fotos | filter: {titulo: filtro}" >
     <div class="clearfix" ng-if="$index%6 == 0"></div>
-    <meu-painel class="col-md-2 ng-cloak painel-animado" titulo="{{foto.titulo | uppercase}}">
+    <meu-painel class="col-md-2 painel-animado" titulo="{{foto.titulo | uppercase}}">
       <minha-foto class="img-responsive center-block"
       url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
-      <button class="btn btn-danger btn-block" ng-click="remover($index)">
-        Remover
-      </button>
+      <a class="btn btn-primary btn-block" href="/fotos/edit/{{foto._id}}">Editar</a>
+      <botao-perigoso nome="Remover" acao="remover($index)"></botao-perigoso>
     </meu-painel>
   </div>
 </div>

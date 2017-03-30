@@ -19,5 +19,16 @@
         urlImagem: "@url"
       }
     };
+  }])
+  .directive('botaoPerigoso', [function () {
+    var ddo = {};
+    ddo.restric = "E";
+    ddo.scope = {
+      nome: '@', // passa sempre uma string. essa string será avaliada (val()) no scope restrito.
+      acao: '&' // vincula o valor passado ao scope parente. A expressão será avaliada no scope da controller.
+    };
+    ddo.template = '<button class="btn btn-danger btn-block" ng-click="acao()">{{nome}}</button>'
+
+    return ddo;
   }]);
 })()
