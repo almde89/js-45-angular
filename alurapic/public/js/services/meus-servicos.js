@@ -1,8 +1,7 @@
-(function (doc) {
-  var app = angular.module('meusServicos', ['ngMessages'])
+(function () {
+  var app = angular.module('meusServicos', ['ngResource'])
     .factory('recursoFoto', ['$resource', function ($resource) {
-      return {
-
-      };
+      var recursoFoto = $resource('v1/fotos/:fotoId', null, {update: {method: 'PUT'}});
+      return recursoFoto;
     }]);// criação do módulo
-})(document)
+})()

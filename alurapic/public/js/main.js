@@ -1,6 +1,6 @@
 (function (doc) {
   var app = angular.module('alurapic',
-    ['diretivasBootstrap', 'ngAnimate', 'ngRoute', 'ngMessages', 'ngResource'])
+    ['diretivasBootstrap', 'ngAnimate', 'ngRoute', 'ngMessages', 'meusServicos'])
     .config(['$routeProvider', '$locationProvider', function ($route, $location) {
       $location.html5Mode(true);
 
