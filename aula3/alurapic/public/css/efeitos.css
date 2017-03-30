@@ -1,7 +1,0 @@
-.painel-animado {
-  transition: transform 0.5s;
-}
-
-.painel-animado.ng-leave-active {
-  transform: scale(0.1);
-}
