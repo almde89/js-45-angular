@@ -17,5 +17,6 @@
         controller: 'FotoController' // outra instância do Mesmo Controller.
       });
       $route.otherwise({redirectTo: '/fotos'});
-    }]);// criação do módulo
+    }])
+    .value('eventoFocar', 'focar');// criação do módulo
 })(document)
