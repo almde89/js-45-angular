@@ -30,5 +30,21 @@
     ddo.template = '<button class="btn btn-danger btn-block" ng-click="acao()">{{nome}}</button>'
 
     return ddo;
+  }])
+  .directive('almFoco', [function () {
+    return {
+      restric: 'A',
+      scope: {
+        focado: "="
+      },
+      link: function (scope, element) {
+        scope.$watch('focado', function () {
+          if (scope.focado) {
+            element[0].focus();
+            scope.focado = false;
+          }
+        });
+      }
+    };
   }]);
 })()

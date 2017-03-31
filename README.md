@@ -53,3 +53,6 @@ recursoFoto.delete({fotoId: '12ab'}, fn, fn);
 /* conforme definido em 5 linha. */
 recursoFoto.update({fotoId: '12ab'}, $scope.foto, fn, fn);
 ```
+
+# Aula 5
+**Vide:** http://blog.alura.com.br/construtores-em-javascript/.
