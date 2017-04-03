@@ -1,0 +1,14 @@
+<md-toolbar class="md-whiteframe">
+  <div class="md-toolbar-tools">
+    <h2>Alurapic</h2>
+  </div>
+</md-toolbar>
+<md-content layout-padding><!-- 8dps -->
+  <md-grid-list md-cols="1" md-cols-sm="2" md-cols-gt-sm="3" md-row-height="4:3"
+  md-gutter="8px">
+    <md-grid-tile ng-repeat="foto in fotos">
+      <img ng-src="{{foto.url}}" alt="{{foto.titulos}}">
+      <md-grid-tile-footer><h3>{{foto.titulo}}</h3></md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+</md-content>

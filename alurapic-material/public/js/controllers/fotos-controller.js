@@ -1,6 +1,9 @@
 angular
   .module('alurapic')
   .controller('FotosController', function($scope, recursoFoto) {
+    $scope.$watch(function () {
+      console.log('$watch');
+    });
     recursoFoto.query(function(fotos) {
         $scope.fotos = fotos;
       }, function(erro) {
